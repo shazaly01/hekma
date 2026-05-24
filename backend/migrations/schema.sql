@@ -40,7 +40,16 @@ CREATE TABLE IF NOT EXISTS app_settings (
 CREATE TABLE IF NOT EXISTS departments (
     id VARCHAR(36) PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
+    color VARCHAR(50) DEFAULT '#1a5b9c',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS sections (
+    id VARCHAR(36) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    department_id VARCHAR(36) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS job_titles (
@@ -59,6 +68,10 @@ CREATE TABLE IF NOT EXISTS card_types (
     id VARCHAR(36) PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     logo_url VARCHAR(500),
+    website_text VARCHAR(255),
+    back_instructions TEXT,
+    card_title VARCHAR(255),
+    company_name VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -82,8 +95,10 @@ CREATE TABLE IF NOT EXISTS employees (
     id VARCHAR(36) PRIMARY KEY,
     employee_number VARCHAR(100),
     name VARCHAR(255) NOT NULL,
+    english_name VARCHAR(255),
     card_number VARCHAR(100),
     department VARCHAR(255),
+    section VARCHAR(255),
     job_title VARCHAR(255),
     nationality VARCHAR(255),
     passport_number VARCHAR(100),
