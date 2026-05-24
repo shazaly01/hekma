@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="qrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" rx="32" fill="url(#qrGrad)" />
+
+  <!-- QR Outer Boxes -->
+  <g fill="#ffffff">
+    <!-- Top Left -->
+    <path d="M24,24 h28 v28 h-28 z M30,30 h16 v16 h-16 z M34,34 h8 v8 h-8 z" />
+    
+    <!-- Top Right -->
+    <path d="M76,24 h28 v28 h-28 z M82,30 h16 v16 h-16 z M86,34 h8 v8 h-8 z" />
+
+    <!-- Bottom Left -->
+    <path d="M24,76 h28 v28 h-28 z M30,82 h16 v16 h-16 z M34,86 h8 v8 h-8 z" />
+
+    <!-- Modules -->
+    <rect x="60" y="24" width="8" height="8" rx="1" />
+    <rect x="60" y="36" width="8" height="8" rx="1" />
+    <rect x="48" y="60" width="8" height="8" rx="1" />
+    <rect x="60" y="60" width="8" height="8" rx="1" />
+    <rect x="72" y="60" width="8" height="8" rx="1" />
+    <rect x="60" y="72" width="8" height="8" rx="1" />
+    <rect x="60" y="84" width="8" height="8" rx="1" />
+    <rect x="60" y="96" width="8" height="8" rx="1" />
+
+    <rect x="76" y="60" width="8" height="8" rx="1" />
+    <rect x="88" y="60" width="8" height="8" rx="1" />
+    <rect x="96" y="72" width="8" height="8" rx="1" />
+    <rect x="84" y="84" width="8" height="8" rx="1" />
+    <rect x="96" y="84" width="8" height="8" rx="1" />
+    <rect x="76" y="96" width="8" height="8" rx="1" />
+    <rect x="88" y="96" width="8" height="8" rx="1" />
+    <rect x="96" y="96" width="8" height="8" rx="1" />
+  </g>
+  
+  <rect width="128" height="128" rx="32" fill="none" stroke="#ffffff" stroke-width="4" stroke-opacity="0.15" />
+</svg>

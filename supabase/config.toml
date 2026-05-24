@@ -1,0 +1,10 @@
+project_id = "vnnhgbeezmjdaygtukqh"
+
+[functions.manage-roles]
+verify_jwt = false
+
+[functions.check-expiry]
+verify_jwt = false
+
+[functions.log-qr-scan]
+verify_jwt = false
